@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "ChromaClicker",
+  "version": "1.0.1",
+  "description": "Automated color-based clicking tool. Pick a pixel, wait for a match, and auto-click.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ChromaClicker Control"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
